@@ -4,7 +4,7 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <option name="testRunner" value="PLATFORM" />
+        <option name="testRunner" value="GRADLE" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
@@ -17,6 +17,7 @@
             <option value="$PROJECT_DIR$/data/local" />
             <option value="$PROJECT_DIR$/data/remote" />
             <option value="$PROJECT_DIR$/features" />
+            <option value="$PROJECT_DIR$/features/moviedetail" />
             <option value="$PROJECT_DIR$/features/movielist" />
             <option value="$PROJECT_DIR$/repository" />
           </set>

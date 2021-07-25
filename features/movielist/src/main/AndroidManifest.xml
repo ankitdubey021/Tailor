@@ -3,7 +3,7 @@
     package="com.ankitdubey.tailor.movielist">
 
     <application>
-        <activity android:name=".FeatureActivity"></activity>
+
     </application>
 
 </manifest>

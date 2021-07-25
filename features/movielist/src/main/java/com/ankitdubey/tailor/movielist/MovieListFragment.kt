@@ -1,11 +1,11 @@
 package com.ankitdubey.tailor.movielist
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
-import androidx.navigation.fragment.findNavController
 import com.ankitdubey.tailor.core.ui.BaseFragment
 import com.ankitdubey.tailor.movielist.databinding.FragmentMovieListBinding
 import com.google.android.material.chip.Chip
@@ -45,10 +45,22 @@ class MovieListFragment : BaseFragment<FragmentMovieListBinding>() {
 
     private fun initViews() {
         adapter = MovieListAdapter(clickCallback = {
-
+            navigateToDetails(it.id)
         })
 
         binding.rv.adapter = adapter
+    }
+
+    private fun navigateToDetails(movieId: Long) {
+        val intent = Intent()
+        intent.action = "tmdb://details"
+        intent.putExtra(
+            "id",
+            movieId
+        )
+        if (intent.resolveActivity(requireActivity().packageManager) != null) {
+            startActivity(intent)
+        }
     }
 
     override fun getViewBinding(

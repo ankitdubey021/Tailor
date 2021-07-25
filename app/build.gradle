@@ -41,6 +41,7 @@ dependencies {
     implementation(project(":data:remote"))
     implementation(project(":repository"))
     implementation(project(":features:movielist"))
+    implementation(project(":features:moviedetail"))
 
     implementation(AndroidX.core)
     implementation(AndroidX.constraints)
